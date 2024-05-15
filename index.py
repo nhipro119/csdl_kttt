@@ -23,3 +23,5 @@ class Index():
         # https://nlp.stanford.edu/IR-book/html/htmledition/inverse-document-frequency-1.html
         return math.log10(len(self.documents) / self.document_frequency(token))
 
+    def _results(self, analyzed_query):
+        return [self.index.get(token, set()) for token in analyzed_query]

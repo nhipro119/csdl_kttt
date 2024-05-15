@@ -21,7 +21,7 @@ def load_vnexpress():
 #### load paper in DANeS ################
 def load_DANeS():
     path = os.getcwd()
-    data_path = os.path.join(path, "DANeS-main\\raw_data")
+    data_path = os.path.join(path, "DANeS-main/raw_data")
     ldf = os.listdir(data_path)
     with open(os.path.join(data_path,ldf[0]),encoding='utf-8') as f:
 
@@ -35,5 +35,5 @@ def load_DANeS():
         class_data.append(Abstract(ID=idx, title=title, abstract=description, url=url))
         idx+=1
     return class_data
-print(len(load_DANeS()))   
+
             
